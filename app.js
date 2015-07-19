@@ -11,4 +11,25 @@ appHelper.runApp(function(app, db) {
 		resp.end();
 	});
 
+  app.get("/icecream/:flavor?", function (req, resp){
+    resp.render("icecream", {
+      flavor: req.params.flavor
+    });
+  })
+  
+  app.get("/travel", function(req, resp){
+    db.findArray({}, function(results){
+      resp.render("travel", {
+        locations: results
+      })
+    })
+  })
+  app.get("/travel/rating/:rating", function(req, resp){
+    var rating = parseInt(req.params.rating);
+    db.findArray({rating: rating}, function(results){
+      resp.render("travel", {
+        locations: results
+      })
+    })
+  })
 })

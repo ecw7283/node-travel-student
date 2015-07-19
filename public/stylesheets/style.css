@@ -1,7 +1,14 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Lato", Helvetica, Arial, sans-serif;
+  background-color: plum;
 }
 a {
+  font: 12px "Lato";
   color: #00b7ff;
+}
+div.location{
+  P{
+  margin-left: 20px;
+  }
 }

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Carmen Sandiego</title>
+        <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+  
+  <body>
+    <span><h1>Where in the world is</h1></span>
+    <span><h6>Carmen Sandiego</h6></span>
+    <%
+      for (var i=0; i < locations.length; i++){
+    %>
+    <div class="location">
+      <h3><%= locations[i].name %> - <%= locations[i].country %></h3>
+      <img src="/images/<%=locations[i].image_name%>">
+      <p><%=locations[i].description%></p>
+      <p><%=locations[i].rating%> (out of 5)</p>
+    </div>
+    <% } %>
+  </body>
+</html>
